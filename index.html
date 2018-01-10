@@ -17,15 +17,20 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
   <!-- Custom styles for this template -->
   <link href="css/landing-page.css" rel="stylesheet">
 
-</head> 
+</head>
 
 <body>
   <!-- Modal -->
-  <span class="" id="storeID"></span>
   <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -48,25 +53,19 @@
               <span class="step_txt">Upload Profile</span>
             </li>
 
-            <!-- <li>
+            <li>
               <span class="line"></span>
               <span class="bubble"></span>
               <span class="step_txt">Free Trial</span>
             </li>
-
-
-            <li>
-              <span class="line"></span>
-              <span class="bubble"></span>
-              <span class="step_txt">Candidates</span>
-            </li> -->
           </ul>
-          <form id="submitForm" name="submitForm  ">
-            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="name">
-            <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" name="email">
-            <input type="text" class="form-control form-control-lg" placeholder="Phone Number" name="phone">
-            <input type="text" class="form-control form-control-lg" placeholder="Company Name" name="company_name">
-            <input type="text" class="form-control form-control-lg" placeholder="Address" name="address">
+
+          <form id="submitForm" name="submitForm" data-toggle="validator">
+            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="name" id="name">
+            <input type="email" name="email" class="form-control form-control-lg" id="email" placeholder="Email">
+            <input type="text" class="form-control form-control-lg" placeholder="Phone Number" name="phone" id="phone">
+            <input type="text" class="form-control form-control-lg" placeholder="Company Name" name="company_name" id="company_name">
+            <input type="text" class="form-control form-control-lg" placeholder="Address" name="address" id="address">
             <select class="form-control form-control-lg" id="inputGroupSelect01">
               <option selected>How did you hear about us? </option>
               <option value="Email" name="from_email">Email</option>
@@ -82,13 +81,14 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" id="formSubmit" class="btn btn-primary">Save changes</button>
+          <button type="submit" id="formSubmit" class="btn btn-primary">Submit</button>
         </div>
         </form>
 
       </div>
     </div>
   </div>
+
 
   <!-- Navigation -->
   <nav id="navbar" class="navbar navbar-expand-md fixed-top">
@@ -146,7 +146,7 @@
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form>
             <div class="form-row">
-                <button type="button" class="btn btn-block btn-lg btn-primary" style="width:100%" data-toggle="modal" data-target="#exampleModalLong">Get Started!</button>
+              <button type="button" class="btn btn-block btn-lg btn-primary" style="width:100%" data-toggle="modal" data-target="#exampleModalLong">Get Started!</button>
             </div>
           </form>
         </div>
@@ -166,7 +166,7 @@
           <h2>Post Your Profile </h2>
           <p class="lead mb-0">Fill out your profile online, then download the app to create &amp; upload authentic videos. Add interview questions
             to save time and ensure that you see how candidates answer questions, on video. </p>
-            <button type="button" class="btn btn-block btn-lg btn-primary"  data-toggle="modal" data-target="#exampleModalLong">Get Started!</button>
+          <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModalLong">Get Started!</button>
 
         </div>
       </div>
@@ -217,7 +217,7 @@
         <h2>Interview &amp; Hire</h2>
         <p class="lead mb-0">Scheduling interviews is annoying and a headache - so let us do it! Our software helps find a good time for both
           your team and the candidate. Having seen your content, the candidate will already be eager to talk with you.</p>
-          <button type="button" class="btn btn-block btn-lg btn-primary"  data-toggle="modal" data-target="#exampleModalLong">Get Started!</button>
+        <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModalLong">Get Started!</button>
 
       </div>
     </div>
@@ -363,24 +363,27 @@
     </div>
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
   <script>
+    var re =
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
     $('#formSubmit').click(function (e) {
-      e.preventDefault();
+
       // alert($('#email').val());
-      var str = $( "#submitForm" ).serialize();
-      alert(str);
-      window.location = "uploadProfile.html?" + str;
-      // $.post('./uploadProfile.html', 
-      //    $('#onboardingInformation').serialize(), 
-      //    function(data, status, xhr){
-      //      // do something here with response;
-      //    });
+      e.preventDefault();
+
+      if (!$('#email').val().match(re)) {
+        alert('Invalid email! ');
+      }
+      if (!$('#name').val() || !$('#phone').val() || !$('#company_name').val() || !$('#address').val()) {
+        alert('Make sure all boxes are filled in with correct information. ');
+      } else {
+        window.location = "uploadProfile.html?" + $("#submitForm").serialize()
+      }
 
     });
-
   </script>
 
 

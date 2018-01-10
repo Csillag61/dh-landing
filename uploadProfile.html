@@ -220,35 +220,45 @@
         }
       }
     }
+    // find %20, %40 in a string and replaces with a ' ' and '@' respectively
+    function CleanVariable(res) {
+      var res = res.replace(/%20/g, " ");
+      var res = res.replace(/%40/g, "@");
+      return (res);
 
+    }
   </script>
   <script>
+    var email = CleanVariable(GetURLParameter("email"));
+    var name = CleanVariable(GetURLParameter("name"));
+    var phone = CleanVariable(GetURLParameter("phone"));
+    var company_name = CleanVariable(GetURLParameter("company_name"));
+    var address = CleanVariable(GetURLParameter("address"));
+
     var profileInformation = {
-      "email": GetURLParameter("email"),
-      "name": GetURLParameter("name"),
-      "phone": GetURLParameter("phone"),
-      "company_name": GetURLParameter("company_name"),
-      "address": GetURLParameter("address"),
+      "email": email,
+      "name": name,
+      "phone": phone,
+      "company_name": company_name,
+      "address": address,
     }
-    
+    // alert(JSON.stringify(profileInformation))
     // set the friendly greeting in header
-    var email = $("#greetingName").text(GetURLParameter("email"));
+    $("#greetingName").text(name);
 
-
-    // make post request, give all user information to server
-    // server checks to see if user exists. 
-    // if yes, send back the existing pin
-    // if no, generate new pin, add to database with the new pin, send back the new pin
     $.ajax({
       type: "POST",
-      url: "http://localhost:5000/getPIN",
+      url: "http://localhost:3001/v1.0/register_company",
       // The key needs to match your method's input parameter (case-sensitive).
-      data: JSON.stringify({ userData: profileInformation }),
-      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(
+        profileInformation
+      ),
+      contentType: "application/json",
       dataType: "json",
       success: function (data) {
-        // alert(data);
-        $("#secure-pin").text(data);
+        console.log(data);
+        alert(data['pin']);
+        $("#secure-pin").text(data['pin']);
       },
       failure: function (errMsg) {
         alert("There was an error, sorry! Please email steve@deephire.io with code 2020ERROR");
