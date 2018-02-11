@@ -129,7 +129,7 @@
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-            <h5>Kyle Trusler, HR Manager</h5>
+            <h5>Fiona Clarke, HR Manager</h5>
             <p class="font-weight-light mb-0">"We go to a lot of Career Fairs, and we aren't able to talk to everyone we want. DeepHire lets us reach all the
               people at a Fair, and asked them our Pre-Interview Questions for us. For any company looking to get more out
               of Career Fairs, DeepHire is the solution for you. "</p>
@@ -248,7 +248,7 @@
 
     $.ajax({
       type: "POST",
-      url: "http://localhost:3001/v1.0/register_company",
+      url: "https://api.deephire.io/v1.0/register_company",
       // The key needs to match your method's input parameter (case-sensitive).
       data: JSON.stringify(
         profileInformation
@@ -257,7 +257,7 @@
       dataType: "json",
       success: function (data) {
         console.log(data);
-        alert(data['pin']);
+        //alert(data['pin']);
         $("#secure-pin").text(data['pin']);
       },
       failure: function (errMsg) {
