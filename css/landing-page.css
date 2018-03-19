@@ -24,7 +24,7 @@ h6 {
 
 
   /* 
-  https://work.smarchal.com/twbscolor/4.0.0-beta/css/217bf6ffffffffffff0000000
+  https://work.smarchal.com/twbscolor/4.0.0-beta/css/2F69F8ffffffffffff0000000
   NAVBAR EDITOR TOOL
    */
    /*  deephire green #6DC25C */
@@ -58,7 +58,7 @@ h6 {
           }		
   
   .navbar {
-    background-color: #217bf6;
+    background: linear-gradient(to right, rgba(47,105,248,1), rgba(252,106,106,1));;
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow:0 1px 6px 1px rgba(70,70,70,.3)
@@ -195,7 +195,7 @@ header.masthead {
   padding-bottom: 8rem; }
   header.masthead .overlay {
     position: absolute;
-    background-color: #217BF6;
+    background-color: #2F69F8;
     height: 100%;
     width: 100%;
     top: 0;
@@ -244,7 +244,7 @@ header.masthead {
 
 .call-to-action {
   position: relative;
-  background-color: #217BF6;
+  background-color: #2F69F8;
   background: url("../img/bg-masthead.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -340,14 +340,14 @@ footer.footer {
     right:0
 }
 .progress-indicator>li.completed{
-    color:#217bf6
+    color:#2F69F8
 }
 .progress-indicator>li.completed .bubble{
-    background-color:#217bf6;
-    color:#217bf6
+    background-color:#2F69F8;
+    color:#2F69F8
 }
 .progress-indicator>li.completed .bubble:after,.progress-indicator>li.completed .bubble:before{
-    background-color:#217bf6;
+    background-color:#2F69F8;
     z-index:10
 }
 .progress-indicator>li a:hover .bubble{

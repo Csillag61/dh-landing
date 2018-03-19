@@ -132,7 +132,12 @@ header.masthead {
     margin-right: auto;
     margin-left: auto; }
     header.masthead .device-container .screen img {
-      border-radius: 3px; }
+      border-radius: 3px;
+      padding-bottom: 100px;
+      max-height: 700px;
+      
+      
+    }
   @media (min-width: 992px) {
     header.masthead {
       height: 100vh;
@@ -184,7 +189,7 @@ section.features .device-container {
   margin-bottom: 100px; }
   @media (min-width: 992px) {
     section.features .device-container {
-      margin-bottom: 0; } }
+      margin-bottom: 20px; } }
 
 section.features .feature-item {
   padding-top: 50px;
@@ -277,9 +282,9 @@ footer {
         text-decoration: none; }
 
 .bg-primary {
-  background: #6DC25C;
-  background: -webkit-linear-gradient(#6DC25C, #6DC25C);
-  background: linear-gradient(#6DC25C, #6DC25C); }
+  background: rgba(47,105,248,.1);
+  background: -webkit-linear-gradient(rgba(47, 104, 248, 0.20), rgba(47,105,248,.1));
+  background: linear-gradient(rgba(47, 104, 248, 0.20), rgba(47,105,248,.1)); }
 
 .text-primary {
   color: #6DC25C; }
