@@ -1,0 +1,50 @@
+[02-Apr-2018 20:52:29 UTC] PHP Fatal error:  Uncaught Swift_RfcComplianceException: Address in mailbox given [q] does not comply with RFC 2822, 3.6.2. in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php:348
+Stack trace:
+#0 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(263): Swift_Mime_Headers_MailboxHeader->_assertValidAddress('q')
+#1 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(106): Swift_Mime_Headers_MailboxHeader->normalizeMailboxes(Array)
+#2 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(63): Swift_Mime_Headers_MailboxHeader->setNameAddresses(Array)
+#3 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/SimpleHeaderFactory.php(58): Swift_Mime_Headers_MailboxHeader->setFieldBodyModel(Array)
+#4 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/SimpleHeaderSet.php(68): Swift_Mime_Simpl in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php on line 348
+[02-Apr-2018 20:53:30 UTC] PHP Fatal error:  Uncaught Swift_RfcComplianceException: Address in mailbox given [q] does not comply with RFC 2822, 3.6.2. in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php:348
+Stack trace:
+#0 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(263): Swift_Mime_Headers_MailboxHeader->_assertValidAddress('q')
+#1 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(106): Swift_Mime_Headers_MailboxHeader->normalizeMailboxes(Array)
+#2 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(63): Swift_Mime_Headers_MailboxHeader->setNameAddresses(Array)
+#3 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/SimpleHeaderFactory.php(58): Swift_Mime_Headers_MailboxHeader->setFieldBodyModel(Array)
+#4 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/SimpleHeaderSet.php(68): Swift_Mime_Simpl in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php on line 348
+[02-Apr-2018 20:56:57 UTC] PHP Fatal error:  Uncaught Swift_RfcComplianceException: Address in mailbox given [q] does not comply with RFC 2822, 3.6.2. in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php:348
+Stack trace:
+#0 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(263): Swift_Mime_Headers_MailboxHeader->_assertValidAddress('q')
+#1 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(106): Swift_Mime_Headers_MailboxHeader->normalizeMailboxes(Array)
+#2 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php(63): Swift_Mime_Headers_MailboxHeader->setNameAddresses(Array)
+#3 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/SimpleHeaderFactory.php(58): Swift_Mime_Headers_MailboxHeader->setFieldBodyModel(Array)
+#4 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/SimpleHeaderSet.php(68): Swift_Mime_Simpl in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mime/Headers/MailboxHeader.php on line 348
+[02-Apr-2018 21:00:57 UTC] PHP Fatal error:  Uncaught Swift_TransportException: Expected response code 220 but got code "", with message "" in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php(289): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('', Array)
+#1 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php(117): Swift_Transport_AbstractSmtpTransport->_readGreeting()
+#2 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 /Applications/MAMP/htdocs/dh-landing/mailer/submit-contact-form.php(65): Swift_Mailer->send(Object(Swift_Message))
+#4 {main}
+  thrown in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
+[02-Apr-2018 21:03:14 UTC] PHP Fatal error:  Uncaught Swift_TransportException: Expected response code 250 but got code "530", with message "530 5.7.0 Must issue a STARTTLS command first. p8sm1066723qkp.37 - gsmtp
+" in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('530 5.7.0 Must ...', Array)
+#1 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<stev...', Array, Array)
+#2 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/EsmtpTransport.php(347): Swift_Transport_EsmtpTransport->executeCommand('MAIL FROM:<stev...', Array)
+#3 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php(416): Swift_Transport_Esmtp in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
+[02-Apr-2018 21:12:24 UTC] PHP Fatal error:  Uncaught Swift_TransportException: Expected response code 250 but got code "530", with message "530 5.7.0 Must issue a STARTTLS command first. k188sm926909qkb.14 - gsmtp
+" in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('530 5.7.0 Must ...', Array)
+#1 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<stev...', Array, Array)
+#2 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/EsmtpTransport.php(347): Swift_Transport_EsmtpTransport->executeCommand('MAIL FROM:<stev...', Array)
+#3 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php(416): Swift_Transport_Esmt in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php on line 383
+[02-Apr-2018 21:15:14 UTC] PHP Fatal error:  Uncaught Swift_TransportException: Expected response code 250 but got code "530", with message "530 5.7.0 Must issue a STARTTLS command first. v84sm1001098qkv.15 - gsmtp
+" in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php:383
+Stack trace:
+#0 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('530 5.7.0 Must ...', Array)
+#1 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/EsmtpTransport.php(269): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<stev...', Array, Array)
+#2 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/EsmtpTransport.php(347): Swift_Transport_EsmtpTransport->executeCommand('MAIL FROM:<stev...', Array)
+#3 /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php(416): Swift_Transport_Esmt in /Applications/MAMP/htdocs/dh-landing/mailer/swift_mailer/classes/Swift/Transport/AbstractSmtpTransport.php on line 383

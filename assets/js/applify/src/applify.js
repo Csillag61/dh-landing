@@ -677,7 +677,7 @@
             },
             // AJAX Error
             error: function() {
-                console.error('Error: Ajax Fatal Error');
+                console.error('Errors!: Ajax Fatal Error');
             }
         });
     }

@@ -517,7 +517,7 @@
             modules: "sanitize",
             scrollToTopOnError: false,
             onSuccess: function($form) {
-                submit_form($form, "mailer/submit-contact-form.php");
+                submit_form($form, "http://localhost:8888/dh-landing/mailer/submit-contact-form.php");
                 return false;
             }
         });
@@ -529,7 +529,7 @@
             modules: "sanitize",
             scrollToTopOnError: false,
             onSuccess: function($form) {
-                submit_form($form, "mailer/submit-subscribe-form.php");
+                submit_form($form, "http://localhost:8888/dh-landing/mailer/submit-subscribe-form.php");
                 return false;
             }
         });
@@ -541,6 +541,7 @@
         $.each(the_form.serializeArray(), function() {
             form_data[this.name] = this.value;
         });
+        // console.error(JSON.stringify(form_data));
         var form_json = JSON.stringify(form_data);
         $.ajax({
             url: script,
@@ -566,8 +567,8 @@
                     console.error("Error: " + data.message);
                 }
             },
-            error: function() {
-                console.error("Error: Ajax Fatal Error");
+            error: function(err) {
+                console.error("Errors!: Ajax Fatal Error" + JSON.stringify(err));
             }
         });
     }
