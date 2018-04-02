@@ -49,11 +49,11 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     $mailer = Swift_Mailer::newInstance($transport);
 	
 	## Replace With Your Details !!!
-	$email_to = $user_email;
-	$email_to_name = $user_email;
+	$email_to = $smtp_username;
+	$email_to_name = 'Steven Gates, CEO of DeepHire';
 	$email_from = 'steven@deephire.io';
-	$email_from_name = 'Steven Gates';
-	$email_subject = 'Online Contact Form';
+	$email_from_name = 'Online Contact Form';
+	$email_subject = 'Online Contact Form - Demo Requested';
 
 	# The Email
 	$responder_mail = Swift_Message::newInstance()
